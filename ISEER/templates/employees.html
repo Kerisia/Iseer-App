@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <body>
+<h1>All Employees</h1>
+
+<table border="1" cellpadding="5" cellspacing="5">
+{% for row in data %}
+    <tr>
+    {% for d in row %}
+        <td>{{ d }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+<br />
+<br />
+<br />
+<h2>We can also specify what to display from the the result set as shown below </h2>
+<b>The Names: </b> <br /> <br />
+{% for row in data %}
+   {{row[1]}} {{row[2]}}<br />
+{% endfor %}
+
+
+
+   </body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>Behavioural Anchors</title>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="static/css/w3.css">
+   <link rel="stylesheet" href="static/css/bootstrap.css">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+
+   <style>
+      html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+      body{ background-image: url('static/images/Header.jpg'); } 
+   </style>
+
+ </head>
+
+<body>
+<body class = "w3-theme-d4" />
+      <!-- Navbar -->
+   <div class="w3-top">
+      <div class="w3-bar w3-blue w3-left-align w3-large">
+      <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+       <img src = "static/images/icons/ball.gif" class="w3-circle" style="height:40px;width:40px" alt="Avatar"/>
+      </a>
+        <a class="w3-bar-item w3-padding-large"> ISEER </a>
+        <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/recommend"> Recommendations
+         <img src="static/images/icons/rec.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+     </a>
+
+        <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href= "http://localhost:5000/competence"> Competencies
+        <img src="static/images/icons/comp.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+        </a>
+     </div>
+   </div>
+   <br>
+    </br>
+    <br>
+</br>
+<form method = 'post'> 
+
+        <h2>Behavioural Anchors</h2> 
+
+        <div class="w3-container">           
+        <div class="w3-card w3-white w3-padding-20" style="opacity:0.75">
+            <img src="static/images/icons/key.png" alt="Avatar" style="width:2.5%;"><p><strong>Ratings Key</strong></p>
+			<p>5. Outstanding Performance - Exemplary accomplishments throughout the rating period and/or represented by unique and unusual
+          accomplishments and result in specifically identifiable or quantifiable benefit to System Administration or the
+          institutions.
+			</p>
+			<p>4. Very Good Performance - Exceeded the expectations and requirements of the assigned position and regularly produces expected
+          accomplishments in all areas of responsibility.
+			</p>
+			<p>3. Good Performance - Meets job expectations and requirements and may occasionally exceed performance objectives.</p>
+			<p>2. Needs Improvement - May meet some of the job expectations but does not fully meet the remainder.</p>
+			<p>1. Unsatisfactory Performance - Fails to meet defined expectations and minimum job requirements.</p>
+		  </div>
+		</div>
+    </div>
+			<br>
+			
+			</br>
+    <div class="w3-container w3-card w3-white" style="opacity:0.75">
+        <br>
+        <div class="row">
+            <label for="myEvaluation"><b> Punctuality: </b></label>
+            <span>
+                Report to work on a timely basis and stay on the job.
+            </span>
+            <select id="myEvaluation" name="punctual" class="form-control" style="width:300px" >
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                </select>
+            </div>
+				<br>
+
+                </br>
+        <div class="row">
+                <label for="myEvaluation"> <b>Dependability: </b></label>
+                <span>
+                    Being where he/she should be doing what he/she is supposed to do.
+                </span>
+                <select id="myEvaluation" name="depends"  class="form-control" style="width:300px">
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                    </select>
+            </div>
+				
+				<br>
+
+                </br>
+        <div class="row">
+                <label for="myEvaluation"><b>Adaptability:</b></label>
+                 <span>
+                    Adjusting to change without chaos and initiate or recommend beneficial changes in work procedures.
+                </span>
+                <select id="myEvaluation" name="adapt" class="form-control" style="width:300px">
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>      
+                   </select>
+            </div>
+				
+				<br>
+
+                </br>
+        <div class="row">
+                <label for="myEvaluation"><b>Personality:<b></label>
+                <span>
+                    Includes and welcomes others and works to understand the perspectives of others.
+                </span>
+                <select id="myEvaluation" name="personality" class="form-control" style="width:300px">
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                    </select>
+            </div>
+				<br>
+
+                </br>
+			
+        <div class="row">
+                <label for="myEvaluation"><a>Teamwork:<b></label>
+                <span>
+                    Builds productive working relationship.
+                </span>
+                <select id="myEvaluation" name="teamwork" class="form-control" style="width:300px">
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                    </select>
+            </div>
+				<br>
+
+                </br>	
+        <div class="row">
+                <label for="myEvaluation"><b>Cooperativeness:</b></label>
+                <span>
+                    Working with people without conflict.
+                </span>
+                <select id="myEvaluation" name="cooperate" class="form-control" style="width:300px">
+                <option selected>Choose...</option>
+                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                <option value ="2">Improvement needed (Good) - 2</option>
+                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                   </select>
+            </div>  
+
+<br>
+
+</br>	
+
+    <button class=" w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple w3-blue" style="width:200px"> Save
+    </button>
+    <br>
+   		
+</form>
+</div>
+<br>
+</br>
+<footer class="w3-bar w3-purple w3-padding-15">
+   <h5> </h5>
+ </footer>
+
+ <footer class="w3-bar w3-blue">
+   <p>Copyright @ 2018. Powered by ISEER </p>
+ </footer>
+
+    <!--Footer Section-->
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+ 
+<script>
+ // Accordion
+ function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+ }
+
+ // Used to toggle the menu on smaller screens when clicking on the menu button
+ function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+ }
+ </script>
+ </body>
+</html>

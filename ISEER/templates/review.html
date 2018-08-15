@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<title>Review</title>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="static/css/w3.css">
+   <link rel="stylesheet" href="static/css/bootstrap.css">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+
+   <style>
+      html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+      body {
+      	 background-image:url('static/images/Header.jpg'); }
+   </style>
+
+</head>
+
+<body>
+<!-- Navbar -->
+  <div class="w3-top">
+      <div class="w3-bar w3-blue w3-left-align w3-large">
+      <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+       <img src = "static/images/icons/ball.gif" class="w3-circle" style="height:40px;width:40px" alt="Avatar"/>
+      </a>
+        <a class="w3-bar-item w3-padding-large"> ISEER </a>
+        <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/logout"> Logout
+         <img src="static/images/icons/logout.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+       </a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href= "http://localhost:5000/superhome"> Send to Supervisor For Review
+        <img src="static/images/icons/neweval.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+        </a>
+     </div>
+   </div>
+   <br>
+   
+  </br>
+  <br>
+</br>
+<br>
+<form>
+    <h2> Review </h2>
+    <div class="form-group">
+      <div class="container w3-white w3-padding-20" style="opacity:0.75">
+        <img src="static/images/icons/key.png" alt="Avatar" style="width:2.5%;"><p><strong>Ratings Key</strong></p>
+        <p>State your overall opinion of the employee's performance</p>
+        </div>
+        </div>
+    <br>
+  </br>
+
+<div "w3-container">
+  <div class ="container w3-white w3-padding-20" style="opacity:0.75">
+
+  <p><strong>Overall Score:<strong></p>
+
+  <p> Key Performance Indicators:    <input type="text" name='kpi' style="width=10%"></input></p>  
+<br>
+</br>
+
+  <p> Core Competencies:        <input type="text" name='Competence' style="width=10%"></input></p>
+<br>
+</br>
+
+  <p> Behavioural Anchors:      <input type="text" name='anchors' style="width=10%"></input></p>
+
+<p> Total Score:          <input type="text" name='score' style="width=10%"></input></p>
+<br>
+<p> Overall Score Key: <br> 
+Outstanding - 90-100<br>	
+Very Good - 75-89 <br>
+Complimentary - 61-75 <br>
+Good - 45-60 <br>
+Unsatisfactory - 44 and Below <br/></p>
+
+  </div>	
+   
+<br>
+
+</br>	
+	<div class=" container w3-white w3-padding-20" style="opacity:0.75">    
+  <p><b> Feedback:</b></p>
+
+	<p> Comments on Strengths and Accomplishment</p>
+		<textarea class = "w3-border w3-padding;"style ="width:600px;height:100px;" name='strengths' placeholder="Enter Comment here..."></textarea>
+
+	<p> Comments on Areas Requiring Improvements</p>
+		<textarea class = "w3-border w3-padding;"style ="width:600px;height:100px;" name='improve'placeholder="Enter Comment here..."></textarea>
+	
+	<p> Additional Training/Special Interest Areas</p>
+		<textarea class = "w3-border w3-padding;"style ="width:600px;height:100px;" name='training'placeholder="Enter Comment here..."></textarea>
+	</div>
+<br>
+</br>
+
+  <div class="container w3-white w3-padding-20" style="opacity:0.75">      
+	<p> Employee's Comments</p>
+		<textarea class = "w3-border w3-padding;"style ="width:500px;height:100px;" name='empcomments' placeholder="Enter Comment here..."></textarea>
+
+	<p> Future Goals</p>
+		<textarea class = "w3-border w3-padding;"style ="width:500px;height:100px;" name='goals'placeholder="Enter goals here..."></textarea>
+
+  <br>
+</br>
+<hr>
+</hr>
+
+  <div class="container w3-white w3-padding-20" style="opacity:0.75">
+
+<p>Supervisor's Signature: 
+___________________________________
+
+Date:  ___________________________________ </p>
+
+
+<label>
+    <input type="checkbox" name='confirm' value="">I have read and discuss this performance evaluation with my superior.</label>
+	
+<p> DISCLAIMER STATEMENT:
+  Signature indicates that the performance appraisal has been read and discussed with me.  Signature does not necessarily indicate agreement or disagreement with the content of this appraisal.</p>
+
+ <p>Employee's Signature: 
+___________________________________
+
+Date:  ___________________________________ </p>
+
+<br>
+</br>
+
+  </div>
+
+    <button class=" w3-button w3-hide-small w3-left w3-padding-large w3-hover-purple w3-blue" style="width:200px"> Print
+    </button>
+
+    <button class=" w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple w3-blue" style="width:200px"> Save
+    </button>
+    <br>
+	
+</form>	
+</div>
+<br>
+</br>
+	
+<!-- Footer -->
+ <footer class="w3-bar w3-purple w3-padding-15">
+   <h5> </h5>
+ </footer>
+
+ <footer class="w3-bar w3-blue">
+   <p>Copyright @ 2018. Powered by ISEER </p>
+ </footer>
+
+
+ <script>
+ // Accordion
+ function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+ }
+
+ // Used to toggle the menu on smaller screens when clicking on the menu button
+ function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+ }
+ </script>
+ </body>
+</html>
+
+
+

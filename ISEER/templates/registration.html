@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ISEER Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="static/css/w3.css">
+   <link rel="stylesheet" href="static/css/bootstrap.css">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+   </style>
+   <body class = "w3-theme-d4" />
+      <!-- Navbar -->
+      <div class="w3-top">
+         <div class="w3-bar w3-blue w3-left-align w3-large">
+            <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+            <img src = "static/images/icons/ball.gif" class="w3-circle" style="height:30px;width:30px" alt="Avatar"/>
+            </a>
+            <a class="w3-bar-item w3-padding-large"> ISEER </a>
+            <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/logout"> Logout
+            <img src="static/images/icons/logout.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+
+            <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/superhome"> Home
+            <img src="static/images/icons/neweval.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+            </a>
+         </div>
+      </div>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url('static/images/Header.jpg');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: lightblue;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: purple;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    align: right
+}
+
+.registerbtn:hover {
+    opacity: 5;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a blue background color and center the text of the "sign in" section */
+.signin {
+    background-color: blue;
+    text-align: center;
+}
+</style>
+</head>
+<br>
+
+</br>
+
+<body>
+
+<form Method="POST" Action="{{url_for('registration')}}">
+  <div class="container">
+
+    <h1>Register Employee</h1>
+    <p>Please complete this form to add an employee to the database.</p>
+    <hr>
+
+    <label for="empid"><b>Employee ID</b></label>
+      <input type="text" placeholder="Enter EmpId" name="empid" required>
+
+    <label for="first"><b>First Name</b></label>
+    <input type="text" placeholder="Enter Employee's First Name" name="fname" required>
+
+    <label for="last"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Employee's Last Name" name="lname" required>
+    
+    <label for="sex"><b>Sex</b></label>
+    <input type="text" placeholder="Enter Sex" name="sex" required>
+
+    <!--<label><input type="checkbox" value="">Male</label>
+    <label><input type="checkbox" value="">Female</label> <br><br/> -->
+
+    <label for="dob"><b>Date of Birth</b></label>
+    <input type="text" placeholder="YYYY/MM/DD" name="dob" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Employee's Email" name="email" required>
+    
+	  <label for="Dept"><b>Department</b></label>
+    <input type="text" placeholder="Enter Department" name="department" required>
+    
+	  <label for="jobtitle"><b>Job Title</b></label>
+    <input type="text" placeholder="Enter Employee's Job Title" name="jobtitle" required>
+   
+    <label for="hiredate"><b>Hire Date</b></label>
+    <input type="text" placeholder="YYYY/MM/DD" name="hiredate" required>
+   
+    <label for="supervisor"><b>Supervisor</b></label>
+    <input type="text" placeholder="Enter Supervisor Name" name="supervisor" required>
+    
+	  <label for="emptype"><b>Employee Type</b></label>
+    <input type="text" placeholder="Enter Employee Type" name="emptype" required>
+
+   <!-- <label><input type="checkbox"  value="">Permanent</label>
+    <label><input type="checkbox"  value="">Contract</label> <br><br/>  -->
+   
+    <label for="password"><b>Enter Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    
+    <label for="password"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+    <hr>
+    <hr/>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  </div>
+
+
+</form>
+
+
+<!-- Footer -->
+ <footer class="w3-bar w3-purple w3-padding-15">
+   <h5> </h5>
+ </footer>
+
+ <footer class="w3-bar w3-blue">
+   <p>Copyright @ 2018. Powered by ISEER </p>
+ </footer>
+ <script>
+ // Accordion
+ function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+ }
+
+ // Used to toggle the menu on smaller screens when clicking on the menu button
+ function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+ }
+ </script>
+ </body>
+</html>
+

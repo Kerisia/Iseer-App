@@ -1,0 +1,283 @@
+from flask import Flask, render_template, redirect, url_for, request
+from flaskext.mysql import MySQL
+from datetime import datetime
+
+app = Flask(__name__)
+mysql = MySQL()
+
+# MySQL Configurations
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = ''
+app.config['MYSQL_DATABASE_DB'] = 'mybook'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+mysql.init_app(app)
+
+
+@app.route('/')
+def root():
+	return render_template('login.html') 
+
+	
+@app.route('/main')
+def main():
+	return render_template('main.html')	
+@app.route('/login')
+def index2():
+	return render_template('login.html')
+
+@app.route('/registration')
+def success():
+	return render_template('registration.html')	
+
+@app.route('/login/<name>')
+def success2(name):
+	return render_template('login.html')	
+
+	
+@app.route('/failure/<name>')
+def failure(name):
+	return 'You are NOT welcomed here `:-( %s' % name
+
+@app.route('/empty')
+def empty():
+	return 'At least one field is empty :-('
+
+@app.route('/login',methods=['POST','GET'])
+def login():
+	if request.method == 'POST':
+		username = request.form['uname']
+		password = request.form['pword']
+		print('username  %s' % username)
+		print('password  %s' % password)
+
+		if not username or (not password):
+			return redirect(url_for('empty'))
+		#Create the MySQL connection
+		conn = mysql.connect()
+		#create a cursor to traverse the dataset using the connection
+		cursor = conn.cursor()
+
+		try:
+			query="SELECT * from mybook_User where user_id='"+username+"' and password=md5('"+password+"');"
+			print(query)
+			cursor.execute(query)
+
+			data = cursor.fetchone()
+			#print(data)
+			if data is None:
+				return redirect(url_for('getemployees'))
+			else:
+				return redirect(url_for('getemployees'))
+
+		except Exception as e:
+			print(e)
+		finally:
+			conn.close()
+	return render_template('login.html')
+
+		
+@app.route('/registration',methods=['POST','GET'])
+def registration():
+	if request.method == 'POST':
+		firstname = request.form['fname']
+		lastname = request.form['lname']
+		username = request.form['uname']
+		email = request.form['email']
+		password = request.form['pword']
+
+		print(firstname)
+
+			
+		conn = mysql.connect()
+		#create a cursor to traverse the dataset using the connection
+		cursor = conn.cursor()
+
+		try:
+			query="insert into mybook_User values ('"+username+"','"+email+"', md5('"+password+"'));"			
+			cursor.execute(query)
+			conn.commit()
+			return redirect(url_for('login'))
+
+		except Exception as e:
+			print(e)
+			return redirect(url_for('failure', name=username))
+		finally:
+			conn.close()
+			
+	return render_template('registration.html')	
+
+@app.route('/post',methods=['POST','GET'])
+def post():
+	if request.method == 'POST':
+		post_message = request.form['post-text']
+		post_date = str(datetime.now())
+		post_title = "debug"
+		post_user = "debug"
+		post_type = "text"
+		print(post_message)
+		
+		conn = mysql.connect()
+		#create a cursor to traverse the dataset using the connection
+		cursor = conn.cursor()	
+		cursor2 = conn.cursor()	
+		
+		try:
+			query="insert into post values(NULL,'"+post_user+"','"+post_type+"', '"+post_message+"', '"+post_date+"');"			
+			cursor.execute(query)
+			conn.commit()
+			
+			return redirect(url_for('getemployees'))	
+		except Exception as e:
+			print(e)
+			return redirect(url_for('failure', name=post_user))
+		finally:
+			conn.close()
+			
+	return render_template('main.html')	
+	
+@app.route('/getallusers',methods=['GET'])
+def getallusers():
+		#Create the MySQL connection
+		conn = mysql.connect()
+		#create a cursor to traverse the dataset using the connection
+		cursor = conn.cursor()
+		cursor2 = conn.cursor()	
+		
+		try:
+			
+	
+			query2="select * from post order by post_id desc"
+			cursor.execute(query2)
+			rows = cursor.fetchall()
+		
+			query2="SELECT user_id from  mybook_User;"
+			cursor2.execute(query2)
+			rows2 = cursor2.fetchall()
+			#data =getemployees()
+			return render_template('main.html',data=rows2,data2=rows)
+			
+		except Exception as e:
+			print(e)
+		finally:
+			conn.close()
+		#if username=='admin' and password=='password123':
+			#return redirect(url_for('success', name=username))
+		#else:
+			#return redirect(url_for('failure', name=username))
+		
+		return render_template('main.html',data=rows)
+	
+@app.route('/getallemployees',methods=['GET'])
+def getemployees():
+		#Create the MySQL connection
+		conn = mysql.connect()
+		#create a cursor to traverse the dataset using the connection
+		cursor = conn.cursor()
+		cursor2 = conn.cursor()	
+		
+		try:
+			
+			query2="select * from post order by post_id desc"
+			cursor.execute(query2)
+			rows = cursor.fetchall()
+		
+			query2="SELECT user_id from  mybook_User;"
+			cursor2.execute(query2)
+			rows2 = cursor2.fetchall()
+			#data =getemployees()
+			return render_template('main.html',data=rows2,data2=rows)
+			
+			
+			
+		except Exception as e:
+			print(e)
+		finally:
+			conn.close()
+		#if username=='admin' and password=='password123':
+			#return redirect(url_for('success', name=username))
+		#else:
+			#return redirect(url_for('failure', name=username))
+		
+		return render_template('main.html',data=rows)
+		
+@app.route('/addfriends', methods=['GET','POST'])
+def addfriends():
+	if request.method=='POST':
+		if request.form['submit'] =='getChecked':
+			selected = request.form.getlist('checked')
+			any_selected = bool(selected)
+			print(selected)
+			print(any_selected)
+			return redirect('/')
+		else:
+			conn = mysql.connect()
+			cursor = conn.cursor()
+			cursor2 = conn.cursor()
+
+			try:
+				query2 = "select user_id from  mybook_User;"
+				cursor.execute(query2)
+				rows = cursor.fetchall()
+				return render_template('main.html', data3=rows)
+			except Exception as e:
+				print(e)
+			finally:
+				conn.close()
+
+	else:
+		conn = mysql.connect()
+		cursor = conn.cursor()
+		cursor2 = conn.cursor()
+		try:
+			query2="select * from post order by post_id desc"
+			cursor.execute(query2)
+			rows = cursor.fetchall()
+			query2="SELECT user_id from  mybook_User;"
+			cursor2.execute(query2)
+			rows2 = cursor2.fetchall()
+			#data =getemployees()
+			return render_template('main.html',data=rows2,data2=rows)
+
+		except Exception as e:
+			print(e)
+		finally:
+			conn.close()
+		#if username=='admin' and password=='password123':
+			#return redirect(url_for('success', name=username))
+		#else:
+			#return redirect(url_for('failure', name=username))
+		
+		return render_template('main.html',data=rows)
+
+def GetPostData():
+	conn = mysql.connect()
+	cursor = conn.cursor()
+	try:
+		query = "select * from post order by post_id desc"
+		cursor.execute(query)
+		rows = cursor.fetchall()
+
+	except Exception as e:
+			print(e)
+	finally:
+		conn.close()
+	return rows
+
+def GetAllUsers():
+	conn = mysql.connect()
+	cursor = conn.cursor()
+	try:
+		query = "SELECT user_id from  mybook_User;"
+		cursor.execute(query)
+		rows = cursor.fetchall()
+
+	except Exception as e:
+			print(e)
+	finally:
+		conn.close()
+	return rows
+	
+	
+if __name__ == '__main__':
+	#app.run()
+	app.run(debug=True)

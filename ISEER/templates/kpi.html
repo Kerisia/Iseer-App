@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<title>KPI Assessment</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mdb.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 { font-family: "Open Sans", sans-serif;}
+
+    body{ background-image: url("static/images/Header.jpg"); }
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-blue w3-left-align w3-large">
+        <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+            <img src="static/images/icons/ball.gif" class="w3-circle" style="height:40px;width:40px" alt="Avatar" />
+        </a>
+        <a class="w3-bar-item w3-padding-large"> ISEER </a>
+        <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/engage"> Engagement
+            <img src="static/images/icons/logout.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+
+            <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/home"> Home
+            <img src="static/images/icons/neweval.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+            </a>
+    </div>
+</div>
+<br>
+</br>
+<br>
+</br>
+
+<form method = 'POST'>
+
+<h2>Key Performance Indicators</h2>
+
+<div class="w3-card w3-round w3-white w3-padding-20" style="opacity: 0.75">
+
+    <div class="w3-container">
+        <img src="static/images/icons/key.png" alt="Avatar" style="width:2.5%;">
+        <p><strong>Ratings Key</strong></p>
+        <p> Outstanding Performance - Exemplary accomplishments throughout the rating period and/or represented by unique and unusual accomplishments and result in specifically identifiable or quantifiable benefit to System Administration or the institutions.
+        </p>
+        <p> Very Good Performance - Exceeded the expectations and requirements of the assigned position and regularly produces expected accomplishments in all areas of responsibility.
+        </p>
+        <p> Good Performance - Meets job expectations and requirements and may occasionally exceed performance objectives.</p>
+        <p> Needs Improvement - May meet some of the job expectations but does not fully meet the remainder.</p>
+        <p> Unsatisfactory Performance - Fails to meet defined expectations and minimum job requirements.</p>
+    </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-card w3-white" style="opacity: 0.75">
+<div class="w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <div class="w3-col m12">
+            <div class="container">
+                <div class="form-group">
+                    <label for="inputAddress"><b>Assessment 1:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_one" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_1" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_1" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_1" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_1" placeholder="Enter your comments about employee here...."></textarea>
+                        </div>
+                        <!--.Supervisor's Comment-->
+                    </div>
+            </div>
+            <br>
+            </br>
+            <div class="container">
+                <form>
+                    <!--Key Performance Indicator 2-->
+                    <div>
+                        <div class="form-group">
+                     <label for="inputAddress"><b>Assessment 2:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_two" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_2" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_2" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_2" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_2"   placeholder="Enter your comments about employee here...."></textarea>
+                        </div>
+                        <!--.Supervisor's Comment-->
+                    </div>
+            </div>
+            <br>
+            </br>
+            <div class="container">
+                <form>
+                    <!--Key Performance Indicator 3-->
+                    <div>
+                        <div class="form-group">
+                    <label for="inputAddress"><b>Assessment 3:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_three" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_3" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_3" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_3" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_3"   placeholder="Enter your comments about employee here...."></textarea>
+                        </div>
+                        <!--.Supervisor's Comment-->
+                    </div>
+                    <br>
+                    </br>
+            </div>
+
+            <div class="container">
+               <!-- Key Performance Indicator 4-->
+                <div>
+                 <div class="form-group">
+                    <label for="inputAddress"><b>Assessment 4:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_four" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_4" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_4" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_4" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_4"   placeholder="Enter your comments about employee here...."></textarea>
+                        </div>
+                        <!--.Supervisor's Comment-->
+                    </div>
+            </div>
+            <br>
+            </br>
+            <div class="container">
+                <form>
+                    <!--Key Performance Indicator 5-->
+                    <div>
+                        <div class="form-group">
+                     <label for="inputAddress"><b>Assessment 2:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_five" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_5" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_5" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_5" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_5"   placeholder="Enter your comments about employee here...."></textarea>
+                        </div>                 <!--.Supervisor's Comment-->
+                    </div>
+                    <br>
+                    </br>
+                    <div class="container">
+                        <form>
+                            <!--Key Performance Indicator 6-->
+                            <div>
+                                <div class="form-group">
+                     <label for="inputAddress"><b>Assessment 2:</b></label>
+                    <textarea rows="6" type="text" class="form-control" id="myEvaluation" name="kpi_six" placeholder="Enter KPI here..."></textarea>
+                    </div>
+                    <!--Dropdown -->
+                    <div class="form-row">
+                        <!--My Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="myEvaluation">Employee's Evaluation:</label>
+                            <select id="myEvaluation" name="myeval_6" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                    </select>
+                                    </div>
+                            <!--Supervisor's Evaluation -->
+                        <div class="form-group col-md-6">
+                            <label for="supervisorEvaluation">Supervisor's Evaluation:</label>
+                            <select id="myEvaluation" name="supereval_6" class="form-control" style="width:300px" >
+                                <option selected>Choose...</option>
+                                <option value ="5">Exceptional(Outstanding) - 5 - </option>
+                                <option value ="4">Exceeds expectations (Very Good) - 4 </option>
+                                <option value ="3">Meets expectations (Complimentary) - 3</option>
+                                <option value ="2">Improvement needed (Good) - 2</option>
+                                <option value ="1">Unsatisfactory (Poor) - 1</option>
+                                </select>
+                                  </select>
+                                </div>
+                    </div>
+                        <!--.Dropdown -->
+                        <!--My Comment-->
+                        <div class="form-group">
+                            <label for="myComment">Employee's Comment:</label>
+                            <textarea rows="6" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="mycom_1" name="mycom_6" placeholder="Enter your comments here...."></textarea>
+                        </div>
+                        <!--.My Comment-->
+                        <!--Supervisor's Comment-->
+                        <div class="form-group">
+                            <label for="supervisorComment">Supervisor's Comment:</label>
+                            <textarea rows="3" type="text" class="form-control w3-border w3-padding"style ="width:600px;height:100px;" id="myEvaluation" name="supercom_6"   placeholder="Enter your comments about employee here...."></textarea>
+                        </div>
+
+                                <button class=" w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple w3-blue" style="width:200px"> Save</button>
+                                <br>
+
+                            </div>
+                    </div>
+            </div>
+
+        </div>
+        <!-- End Grid -->
+
+        <!-- End Page Container -->
+
+</form>
+</div>
+<br>
+</br>
+
+    <!-- Footer -->
+    <footer class="w3-bar w3-purple w3-padding-15">
+        <h5> </h5>
+    </footer>
+
+    <footer class="w3-bar w3-blue">
+        <p>Copyright @ 2018. Powered by ISEER </p>
+    </footer>
+
+     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+
+        // Accordion
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme-d1";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+            }
+        }
+
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    </body>
+
+</html>

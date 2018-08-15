@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<title>Employee Database</title>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="static/css/w3.css">
+   <link rel="stylesheet" href="static/css/bootstrap.css">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+
+   <style>
+      html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+      body {
+      	 background-image:url('static/images/Header.jpg'); }
+   </style>
+
+</head>
+
+<body>
+<!-- Navbar -->
+  <div class="w3-top">
+      <div class="w3-bar w3-blue w3-left-align w3-large">
+      <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+       <img src = "static/images/icons/ball.gif" class="w3-circle" style="height:40px;width:40px" alt="Avatar"/>
+      </a>
+        <a class="w3-bar-item w3-padding-large"> ISEER </a>
+        <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/logout"> Logout
+         <img src="static/images/icons/logout.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+       </a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href= "http://localhost:5000/superhome"> Home
+        <img src="static/images/icons/neweval.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+        </a>
+     </div>
+   </div>
+   <br>
+
+ </br>
+ <br>
+
+</br>
+
+       <h2> Employees</h2>
+
+       <div class="w3-container" class="w3-center;" style="overflow-x:auto;">
+     <table style="width:90%;" "border-collapse:collapse;" "border:1px solid;" "border-color:purple;">
+    <tr>
+      <th style="background-color:purple"> Employee's ID</th>
+      <th style="background-color:purple"> First Name</th>
+      <th style="background-color:purple"> Last Name</th>
+      <th style="background-color:purple"> Position</th>
+      <th style="background-color:purple"> Department</th>
+      <th style="background-color:purple"> Supervisor</th>
+      <th style="background-color:purple"> view</th>
+    </tr>
+
+    <tr>
+      <td> 10001 </td>
+      <td> Shereen </td>
+      <td> Brown </td>
+      <td> Senior Financial Analyst </td>
+      <td> Financial Analysis</td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select> </td>
+    </tr>
+
+
+    <tr>
+      <td> 10002 </td>
+      <td> Miguel</td>
+      <td> Crowley </td>
+      <td> Chief Financial Investigator </td>
+      <td> Financial Invstigation</td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10003</td>
+      <td> Jensen </td>
+      <td> Ackles </td>
+      <td> Financial Investigator</td>
+      <td> Financial Invstigation </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+
+    </tr>
+
+      <td> 10004</td>
+      <td>Shavan </td>
+      <td> Bulli </td>
+      <td> Data Entry Clerk</td>
+      <td> Human Resources </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    
+    <tr>
+      <td> 10005</td>
+      <td> Karen </td>
+      <td> Dacres </td>
+      <td> Corporate Services Manager</td>
+      <td> Human Resources </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10006</td>
+      <td>Antoine </td>
+      <td> Grossett</td>
+      <td> Data Systems Analyst</td>
+      <td> Human Resources </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10007</td>
+      <td>Jerome</td>
+      <td> Bent</td>
+      <td> Financial Analyst</td>
+      <td> Financial Analysis </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10008</td>
+      <td> Delton </td>
+      <td> Jennison</td>
+      <td> Financial Analyst</td>
+      <td> Financial Analysis </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10009</td>
+      <td>Steph </td>
+      <td> Frecklton </td>
+      <td> Financial Investigator</td>
+      <td> Financial Invstigation </td>
+      <td>  Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td> 10010</td>
+      <td> Jonathan </td>
+      <td> James </td>
+      <td> Financial Analyst</td>
+      <td> Financial Analysis </td>
+      <td> Remace Jourdaine </td>
+      <td class="select">  
+      <select>
+        <option selected>Choose...</option>
+        <option value = " "> View Profile</option>
+        <option value = " "> Conduct Evaluation</option>
+        <option value = " "> Generate Report</option>
+        <option value = " "></option>
+      </select>
+      </td>
+    </tr>
+
+
+  </table>
+
+</div>
+
+<br>
+
+</br>  
+
+
+
+
+    <button class=" w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple w3-blue" style="width:200px"> Save
+    </button>
+    <br>
+	
+
+</div>
+</body>
+<br>
+</br>
+	
+<!-- Footer -->
+ <footer class="w3-bar w3-purple w3-padding-15">
+   <h5> </h5>
+ </footer>
+
+ <footer class="w3-bar w3-blue">
+   <p>Copyright @ 2018. Powered by ISEER </p>
+ </footer>
+
+
+ <script>
+ // Accordion
+ function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+ }
+
+ // Used to toggle the menu on smaller screens when clicking on the menu button
+ function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+ }
+ </script>
+ </body>
+</html>
+
+
+

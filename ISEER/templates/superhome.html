@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<title>ISEER Super Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+body {
+   background-image:url('static/images/Header.jpg'); }
+</style>
+<body>
+
+<!-- Navbar -->
+      <div class="w3-top">
+         <div class="w3-bar w3-white w3-left-align w3-large">
+            <a class="w3-bar-item w3-padding-large w3-white w3-margin-right">
+            <img src = "static/images/icons/ball.gif" class="w3-circle" style="height:50px;width:60px" alt="Avatar"/>
+            </a>
+            <i class="w3-bar-item w3-padding-large"><b> Integrity Standard Employee Evaluation Report </b></i>
+            <a class="w3-bar-item w3-button w3-round w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/logout"> Logout
+            <img src="static/images/icons/logout.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+          </a>
+
+            <a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/registration"> Create New User
+            <img src="static/images/icons/neweval.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar"/>
+            </a>
+
+         </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-blue w3-center" style="padding:128px 16px;opacity: 0.9;">
+  <div class="w3-content w3-right">  
+  <select id="reviewPeriod" class="form-control">
+    <option><selected>Review Period</option>
+      <option>2019 - Q1 </option>
+      <option>2019 - Q2 </option>
+      <option>2019 - Q3 </option>
+      <option>2019 - Q4 </option>
+      <option>2020 - Q1 </option>
+      </select>
+      </div>
+
+  <div class="w3-content w3-left"> 
+  <select id="reviewPeriod" class="form-control">
+    <option><selected>My Evaluations</option>
+      <option>2019 - Q1 </option>
+      <option>2019 - Q2 </option>
+      <option>2019 - Q3 </option>
+      <option>2019 - Q4 </option>
+      <option>2020 - Q1 </option>
+      </select>
+      </div>
+
+  <h1 class="w3-margin w3-jumbo w3-center"><strong>Welcome to ISEER </strong></h1>
+<br>
+  <p class="w3-xlarge">Hi {{FirstName[0]}}! </p>
+  <img src="static/images/profile.jpg" class="w3-circle" style="height:130x;width:130px;" alt="Avatar"/>  
+    <p >Bio:</p>
+       <p><img src="static/images/icons/title.png"
+            style = "width:25px;height:25px;"> Job Title - {{JobTitle[1]}}</p>
+           <p><img src="static/images/icons/dept.jpg"
+            style = "width:25px;height:25px;">Hire Date - {{HireDate[4]}}</p>
+           <p><img src="static/images/icons/contract.png"
+            style = "width:25px;height:25px;">Employee Type - {{EmpType[5]}}</p>
+            </header>
+<hr>
+</hr>
+<!-- First Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container" style="opacity: 0.9;">
+  <div class="w3-content">
+    <div class="w3-twothird">
+
+      <h5 class="w3-padding-32"><b> None Of Us Is As Strong As All Of Us!
+      <h5 class="w3-text-blue"><b>Employees engage with employees and brands when they're treated as humans worthy of respect."- Meghan M. Biro.</b></h5> <br>
+    </br>
+      
+      <div class = "w3-card " style="opacity: 0.9">      
+        <h4 class="w3-text-blue">Employees </h4><br>
+        <p> Click the link below to view employees.</p>
+        <a class="w3-button w3-hide-small w3-right w3-padding-large w3-hover-purple button-radius:50%" href="http://localhost:5000/myemployees"> View!</a>
+      </div>
+      </div>
+
+    <div class="w3-third w3-center">
+      <img src="static/images/retain.jpg" style="width:175%;" class="w3-margin-bottom">
+    </div>
+  </div>
+</div>
+<hr>
+
+     <!--Second Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container" style="opacity: 0.9;">
+  <div class="w3-content">
+    <div class="w3-twothird">
+
+      <h1>Engage Retain Transform</h1>
+      <h5 class="w3-padding-32"><b> Guidance and Tips: Career Coaching Opportunity.</b></h5>
+
+      <h6 class="w3-text-blue">• Stuck or unsure where to turn to advance in your career?<br>
+      • Are you interested in exploring ALL posibilities relating to your career?<br>
+      • Need assistance in updating resume, completing your Personal History Profile (PHP) and cover letter?<br>
+      • Need training on how to ace an interview? </h6>
+      <p> Speak to your HR Practitioner </p>
+      
+    </div>
+    <div class="w3-third w3-center">
+      <img src="static/images/aid.jpg" style="width:150%;" class="w3-margin-bottom">
+    </div>
+  </div>
+</div>
+<hr>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container" style="opacity: 0.9">
+  <div class="w3-content">
+    <div class="w3-third">
+      <img src="static/images/goals.jpg" style="width:100%" class="w3-margin-bottom"> <br> </br>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Resources</h1>
+      <h4> Read Me!</h4>
+  </div>
+  <div
+    <a class= "w3-color: dodgerblue"/>
+    <p><a href=https://hr.berkeley.edu/performance/performance-management/cycle/review/tips/employees /></p> Tips For Employees
+         <a href=https://hr.berkeley.edu/performance/performance-management/cycle/review/tips/supervisors/checklist-prep /><p> Tips For Supervisors</p>
+     <a href=https://www.youtube.com/watch?v=VA_z5mvjeLc /> <p> Employee Engagement </p>
+     <a href=https://www.youtube.com/watch?v=5aH2Ppjpcho&index=3&list=PLcrdIYb-QqFZ-_24qSKQXz7OOaSoMo_Ai /><p> What Makes Us Feel Good About Our Work?</p>
+   </a>
+   </div>
+    </div>
+  <br>
+  </br>
+  <hr>
+</hr>
+
+<div class="w3-card w3-round w3-white w3-padding-15 w3-center">
+  <img src="static/images/smart.jpg" class="w3-small"></img>
+  </div>
+  </div>
+</div>
+
+<div class="w3-container w3-blue w3-center w3-opacity w3-padding-64">
+  <div class = "w3-content">
+  <h2 class="w3-margin w3-xlarge"><b>Speak Up! Teamwork! Socialize!</b></h2>
+</div>
+</div>
+
+<!-- Footer -->
+ <footer class="w3-bar w3-purple w3-padding-15">
+   <h5> </h5>
+ </footer>
+
+ <footer class="w3-bar w3-blue">
+   <p>Copyright @ 2018. Powered by ISEER </p>
+ </footer>
+ <script>
+ // Accordion
+ function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else {
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+ }
+
+ // Used to toggle the menu on smaller screens when clicking on the menu button
+ function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+ }
+ </script>
+ </body>
+</html>

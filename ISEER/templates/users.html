@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <body>
+<h1>Users</h1>
+
+<table border="1" cellpadding="5" cellspacing="5" color="purple">
+{% for row in data %}
+    <tr>
+    {% for d in row %}
+        <td>{{ d }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+<br />
+<br />
+<br />
+
+
+   </body>
+</html>
